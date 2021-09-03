@@ -12,6 +12,8 @@ import (
 )
 
 func main() {
+	config.InitConfig()
+
 	client := &http.Client{
 		Timeout: 30 * time.Second,
 	}
@@ -30,5 +32,4 @@ func main() {
 	if err := r.Send("template/jobs.html", websites); err != nil {
 		log.Fatal(err)
 	}
-
 }

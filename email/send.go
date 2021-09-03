@@ -22,7 +22,7 @@ type Request struct {
 
 func NewRequest(to []string, subject string) *Request {
 	return &Request{
-		from:    config.GetEnvVar("from"),
+		from:    config.Config.From,
 		to:      to,
 		subject: subject,
 	}
@@ -45,8 +45,8 @@ func (r *Request) parseTemplate(fname string, data interface{}) error {
 
 func (r *Request) sendMail() error {
 	body := "To: " + r.to[0] + "\r\nSubject: " + r.subject + "\r\n" + MIME + "\r\n" + r.body
-	auth := LoginAuth(config.GetEnvVar("username"), config.GetEnvVar("password"))
-	if err := smtp.SendMail(config.GetEnvVar("smtp"), auth, r.from, r.to, []byte(body)); err != nil {
+	auth := LoginAuth(config.Config.Username, config.Config.Password)
+	if err := smtp.SendMail(config.Config.Smtp, auth, r.from, r.to, []byte(body)); err != nil {
 		return err
 	}
 	return nil

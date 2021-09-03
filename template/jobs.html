@@ -43,7 +43,7 @@
             <td style="padding:36px 30px 42px 30px;">
               <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                 <tr>
-                  <td style="padding:0 0 36px 0;color:#153643;">
+                  <td style="padding:0 0 0px 0;color:#153643;">
                     <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Dear
                       Anechka,</h1>
                     <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
@@ -51,21 +51,25 @@
                       in.<br />With love, ton beau Prince Charles from Canada in Norway
                       &#10084;&#65039;
                     </p>
-                    <hr>
                   </td>
+                </tr>
+                <tr>
+                  <td
+                    style="background:none; border:dotted 1px #999999; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding-top:10px;padding-bottom:10px;">
+                    &nbsp;</td>
                 </tr>
                 {{ range .Metadata }}
                 <tr>
                   <td style="padding:0;">
                     <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                       <tr>
-                        <td style="width:260px;padding:0;vertical-align:top;color:#153643;">
+                        <td style="width:100vw;padding:0;vertical-align:top;color:#153643;">
                           <a href="https://toogoodtogo.org/en"
                             style="color:#212121;text-decoration:none;text-underline:none;">
                             <p
                               style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;text-align:center;">
-                              <img src="{{ .Logo }}" alt="Too Good To Go icon" width="60"
-                                style="height:100px;display:block;margin-left:auto;margin-right:auto;width:25%;" />
+                              <img src="{{ .Logo }}" alt="Too Good To Go icon" width=""
+                                style="height:20%;display:block;margin-left:auto;margin-right:auto;width:20%;" />
                             </p>
                             <p
                               style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;text-align:center;">
@@ -82,11 +86,15 @@
                             </li>
                             {{ end }}
                           </ul>
-                          <hr>
                         </td>
                       </tr>
                     </table>
                   </td>
+                </tr>
+                <tr>
+                  <td
+                    style="background:none; border:dotted 1px #999999; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding-top:10px;padding-bottom:10px;">
+                    &nbsp;</td>
                 </tr>
                 {{ end }}
               </table>
