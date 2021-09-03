@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title></title>
+  <!--[if mso]>
+	<noscript>
+		<xml>
+			<o:OfficeDocumentSettings>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+			</o:OfficeDocumentSettings>
+		</xml>
+	</noscript>
+	<![endif]-->
+  <style>
+    table,
+    td,
+    div,
+    h1,
+    p {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body style="margin:0;padding:0;">
+  <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+    <tr>
+      <td align="center" style="padding:0;">
+        <table role="presentation"
+          style="width:602px;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;">
+          <tr>
+            <td align="center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Montreal_August_2017_01.jpg/640px-Montreal_August_2017_01.jpg"
+                alt="Montreal Cityscape" style="height:auto;display:block;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:36px 30px 42px 30px;">
+              <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                <tr>
+                  <td style="padding:0 0 36px 0;color:#153643;">
+                    <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Dear
+                      Anechka,</h1>
+                    <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                      Here is your weekly jobs digest for companies you are interested
+                      in.<br />With love, ton beau Prince Charles from Canada in Norway
+                      &#10084;&#65039;
+                    </p>
+                    <hr>
+                  </td>
+                </tr>
+                {{ range .Metadata }}
+                <tr>
+                  <td style="padding:0;">
+                    <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                      <tr>
+                        <td style="width:260px;padding:0;vertical-align:top;color:#153643;">
+                          <a href="https://toogoodtogo.org/en"
+                            style="color:#212121;text-decoration:none;text-underline:none;">
+                            <p
+                              style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;text-align:center;">
+                              <img src="{{ .Logo }}" alt="Too Good To Go icon" width="60"
+                                style="height:100px;display:block;margin-left:auto;margin-right:auto;width:25%;" />
+                            </p>
+                            <p
+                              style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;text-align:center;">
+                              {{ .Title }}</p>
+                          </a>
+                          <ul style="margin:12px 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"
+                            align="left" type="disc">
+                            {{ range .Jobs }}
+                            <li>
+                              <p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                <a href="{{ .URL }}" style="color:#ee4c50;text-decoration:underline;">{{ .Position
+                                  }}</a>
+                              </p>
+                            </li>
+                            {{ end }}
+                          </ul>
+                          <hr>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                {{ end }}
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px;background:#8e44ad;">
+              <table role="presentation"
+                style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
+                <tr>
+                  <td style="padding:0;width:50%;" align="left">
+                    <p style="margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;">
+                      &reg; reaper47, Canada 2021<br />
+                    </p>
+                  </td>
+                  <td style="padding:0;width:50%;" align="right">
+                    <table role="presentation" style="border-collapse:collapse;border:0;border-spacing:0;">
+                      <tr>
+                        <td style="padding:0 0 0 10px;width:38px;">
+                          <a href="https://github.com/reaper47/jobs-scraper" style="color:#ffffff;"><img
+                              src="https://raw.githubusercontent.com/ErickSimoes/email-icon/master/gh.png"
+                              alt="Github repository" width="20" style="height:auto;display:block;border:0;" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
