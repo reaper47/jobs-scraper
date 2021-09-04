@@ -27,7 +27,9 @@ RUN cp /source/main .
 FROM scratch AS run
 
 COPY --from=build /dist/main /
+COPY --from=build /source/template /template
 COPY --from=build /source/.env /
+COPY --from=build etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 EXPOSE 3001
 

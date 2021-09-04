@@ -15,8 +15,8 @@ func main() {
 
 	ctx := context.Background()
 	for range core.Cron(ctx, time.Now(), 12*time.Second) {
-		//if core.IsFriday() {
-		core.SendMail()
-		//}
+		if core.IsFriday() {
+			core.SendMail()
+		}
 	}
 }
