@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    jobs-scraper:
+        image: reaper99/jobs-scraper:v1.0
+        container_name: jobs-scraper
+        ports:
+            - target: 3002
+              published: 3002
+              protocol: tcp
+              mode: host
+        restart: unless-stopped

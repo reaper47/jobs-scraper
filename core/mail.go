@@ -17,6 +17,7 @@ func SendMail() {
 	if err := r.Send("template/jobs.html", getJobs()); err != nil {
 		log.Fatal(err)
 	}
+	log.Println("Email sent")
 }
 
 func getJobs() *model.Websites {
