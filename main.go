@@ -14,7 +14,7 @@ func main() {
 	config.InitConfig()
 
 	ctx := context.Background()
-	for range core.Cron(ctx, time.Now(), 12*time.Second) {
+	for range core.Cron(ctx, time.Now(), 12*time.Hour) {
 		if core.IsFriday() {
 			core.SendMail()
 		}
