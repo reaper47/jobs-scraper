@@ -7,10 +7,8 @@ import (
 	"github.com/reaper47/jobs-scraper/model"
 )
 
-const BASE_URL = "https://toogoodtogo.org"
-
 func ScrapeTooGoodToGo(client *http.Client) (*model.JobsMetaData, error) {
-	doc, err := request(BASE_URL+"/en/careers/opportunities?location=Canada", client)
+	doc, err := request(BASE_URL_TOOGOODTOGO+"/en/careers/opportunities?location=Canada", client)
 	if err != nil {
 		return nil, err
 	}
@@ -22,7 +20,7 @@ func ScrapeTooGoodToGo(client *http.Client) (*model.JobsMetaData, error) {
 			a.Find(".position-link").Each(func(i2 int, span *goquery.Selection) {
 				jobs = append(jobs, &model.Job{
 					Position: span.Text(),
-					URL:      BASE_URL + href,
+					URL:      BASE_URL_TOOGOODTOGO + href,
 				})
 			})
 		}

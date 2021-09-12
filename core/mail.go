@@ -24,11 +24,17 @@ func getJobs() *model.Websites {
 	client := &http.Client{
 		Timeout: 30 * time.Second,
 	}
+
 	jobsTooGoodToGo, err := websites.ScrapeTooGoodToGo(client)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	jobs := []*model.JobsMetaData{jobsTooGoodToGo}
+	jobsStartupNorway, err := websites.ScrapeStartupNorway(client)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	jobs := []*model.JobsMetaData{jobsTooGoodToGo, jobsStartupNorway}
 	return &model.Websites{Metadata: jobs}
 }
